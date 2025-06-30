@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Black and Orange Theme */
+    --background: 240 10% 3.9%; /* Near Black */
+    --foreground: 0 0% 98%; /* Near White */
+
+    --card: 240 5% 10%; /* Slightly Lighter Dark Grey */
+    --card-foreground: 0 0% 98%; /* Near White */
+
+    --popover: 240 5% 10%; /* Slightly Lighter Dark Grey */
+    --popover-foreground: 0 0% 98%; /* Near White */
+
+    --primary: 24 95% 53%; /* Orange #ff9838 */
+    --primary-foreground: 24 95% 10%; /* Dark Orange */
+
+    --secondary: 240 5% 15%; /* Dark Grey */
+    --secondary-foreground: 0 0% 98%; /* Near White */
+
+    --muted: 240 5% 20%; /* Darker Grey */
+    --muted-foreground: 240 5% 65%; /* Mid Grey */
+
+    --accent: 35 95% 55%; /* Lighter Orange #ffa54c */
+    --accent-foreground: 35 95% 10%; /* Dark Orange/Brown */
+
+    --destructive: 0 72% 51%; /* Red */
+    --destructive-foreground: 0 0% 98%; /* Near White */
+
+    --border: 240 5% 20%; /* Dark Grey */
+    --input: 240 5% 25%; /* Dark Grey */
+    --ring: 24 95% 53%; /* Orange #ff9838 */
+
+    --chart-1: 24 95% 53%; /* Orange */
+    --chart-2: 35 95% 55%; /* Lighter Orange */
+    --chart-3: 0 0% 60%; /* Mid Grey */
+    --chart-4: 0 0% 80%; /* Light Grey */
+    --chart-5: 0 0% 40%; /* Darker Grey */
+
+    --radius: 0.5rem;
+
+    /* Sidebar colors adapted to the dark theme */
+    --sidebar-background: 240 8% 7%; /* Slightly darker than card */
+    --sidebar-foreground: 0 0% 95%; /* Light Grey */
+    --sidebar-primary: 24 95% 53%; /* Orange */
+    --sidebar-primary-foreground: 24 95% 10%; /* Dark Orange */
+    --sidebar-accent: 240 5% 15%; /* Dark Grey (matching secondary) */
+    --sidebar-accent-foreground: 0 0% 98%; /* Near White */
+    --sidebar-border: 240 5% 20%; /* Dark Grey (matching border) */
+    --sidebar-ring: 24 95% 53%; /* Orange */
+  }
+
+  .dark {
+    /* Keep dark theme same as root for now */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 5% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 5% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 24 95% 53%;
+    --primary-foreground: 24 95% 10%;
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 5% 20%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 35 95% 55%;
+    --accent-foreground: 35 95% 10%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 20%;
+    --input: 240 5% 25%;
+    --ring: 24 95% 53%;
+    --chart-1: 24 95% 53%;
+    --chart-2: 35 95% 55%;
+    --chart-3: 0 0% 60%;
+    --chart-4: 0 0% 80%;
+    --chart-5: 0 0% 40%;
+    --sidebar-background: 240 8% 7%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 24 95% 10%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 5% 20%;
+    --sidebar-ring: 24 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

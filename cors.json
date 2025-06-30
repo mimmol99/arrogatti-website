@@ -1,0 +1,11 @@
+[
+  {
+    "origin": [
+      "http://localhost:9002",
+      "https://arrogattiandco-odv.com"
+    ],
+    "method": ["GET", "POST", "PUT", "DELETE"],
+    "responseHeader": ["Content-Type"],
+    "maxAgeSeconds": 3600
+  }
+]

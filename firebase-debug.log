@@ -1,0 +1,676 @@
+[debug] [2025-07-01T10:22:58.051Z] ----------------------------------------------------------------------
+[debug] [2025-07-01T10:22:58.053Z] Command:       /home/domenico/.nvm/versions/node/v24.3.0/bin/node /home/domenico/.nvm/versions/node/v24.3.0/bin/firebase deploy
+[debug] [2025-07-01T10:22:58.053Z] CLI Version:   14.8.0
+[debug] [2025-07-01T10:22:58.053Z] Platform:      linux
+[debug] [2025-07-01T10:22:58.053Z] Node Version:  v24.3.0
+[debug] [2025-07-01T10:22:58.054Z] Time:          Tue Jul 01 2025 12:22:58 GMT+0200 (Central European Summer Time)
+[debug] [2025-07-01T10:22:58.054Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-01T10:22:58.331Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-01T10:22:58.332Z] > authorizing via signed-in user (longobardi90@gmail.com)
+[debug] [2025-07-01T10:22:58.332Z] [iam] checking project amici-felini for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-07-01T10:22:58.333Z] Checked if tokens are valid: false, expires at: 1751365564484
+[debug] [2025-07-01T10:22:58.333Z] Checked if tokens are valid: false, expires at: 1751365564484
+[debug] [2025-07-01T10:22:58.333Z] > refreshing access token with scopes: []
+[debug] [2025-07-01T10:22:58.335Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-07-01T10:22:58.335Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-01T10:22:58.574Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-07-01T10:22:58.574Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-01T10:22:58.581Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions [none]
+[debug] [2025-07-01T10:22:58.581Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions x-goog-quota-user=projects/amici-felini
+[debug] [2025-07-01T10:22:58.581Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-01T10:22:59.428Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions 200
+[debug] [2025-07-01T10:22:59.428Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-01T10:22:59.429Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:22:59.429Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:22:59.430Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/amici-felini [none]
+[debug] [2025-07-01T10:22:59.863Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/amici-felini 200
+[debug] [2025-07-01T10:22:59.864Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/amici-felini {"projectId":"amici-felini","projectNumber":"382127018088","displayName":"Amici Felini","name":"projects/amici-felini","resources":{"hostingSite":"amici-felini"},"state":"ACTIVE","etag":"1_cfd86a4c-d4a6-4892-8721-d4c4b5bd8176"}
+[debug] [2025-07-01T10:23:01.994Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:01.994Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:01.995Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites pageToken=&pageSize=10
+[debug] [2025-07-01T10:23:03.000Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites 200
+[debug] [2025-07-01T10:23:03.001Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites {"sites":[{"name":"projects/amici-felini/sites/amici-felini","defaultUrl":"https://amici-felini.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-07-01T10:23:03.002Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:03.002Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:03.002Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites 
+[debug] [2025-07-01T10:23:03.292Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites 200
+[debug] [2025-07-01T10:23:03.292Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites {"sites":[{"name":"projects/amici-felini/sites/amici-felini","defaultUrl":"https://amici-felini.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-07-01T10:23:03.293Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:03.293Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:03.293Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/amici-felini/webApps/-/config [none]
+[debug] [2025-07-01T10:23:03.901Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/amici-felini/webApps/-/config 200
+[debug] [2025-07-01T10:23:03.902Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/amici-felini/webApps/-/config {"projectId":"amici-felini","appId":"1:382127018088:web:1a13eb7cfe2789d76f6bdd","storageBucket":"amici-felini.firebasestorage.app","apiKey":"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk","authDomain":"amici-felini.firebaseapp.com","messagingSenderId":"382127018088"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-07-01T10:23:08.496Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:08.496Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:08.497Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites/amici-felini [none]
+[debug] [2025-07-01T10:23:09.445Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites/amici-felini 200
+[debug] [2025-07-01T10:23:09.445Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites/amici-felini {"name":"projects/amici-felini/sites/amici-felini","defaultUrl":"https://amici-felini.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.2.3
+
+[info]    - Environments: .env
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Skipping validation of types
+
+[info]    Skipping linting
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/13) ...
+
+[info]    Generating static pages (3/13) 
+
+[info]    Generating static pages (6/13) 
+
+[info]    Generating static pages (9/13) 
+
+[info]  ✓ Generating static pages (13/13)
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (app)                                 Size  First Load JS  Revalidate  Expire
+┌ ○ /                                    2.73 kB         265 kB          1m      1y
+├ ○ /_not-found                            977 B         101 kB
+├ ○ /admin                               4.06 kB         261 kB
+├ ○ /admin/add-cat                       5.07 kB         259 kB
+├ ○ /admin/chats                         3.57 kB         258 kB
+├ ƒ /admin/edit-cat/[id]                 6.83 kB         266 kB
+├ ○ /browse                                185 B         109 kB
+├ ƒ /cats/[id]                           11.8 kB         271 kB
+├ ƒ /chat/[chatId]                       3.23 kB         257 kB
+├ ○ /chats                                1.8 kB         259 kB
+├ ○ /login                               3.87 kB         261 kB
+├ ○ /profile                             4.66 kB         259 kB
+└ ○ /register                            3.98 kB         261 kB
++ First Load JS shared by all             100 kB
+  ├ chunks/4bd1b696-989d33d1584df2ab.js  53.2 kB
+  ├ chunks/684-12ac0d270c051f13.js       45.3 kB
+  └ other shared chunks (total)          1.91 kB
+
+
+
+[info] ○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • use of revalidate /
+[info]  • non-static component /admin/edit-cat/[id]/page
+[info]  • non-static component /cats/[id]/page
+[info]  • non-static component /chat/[chatId]/page
+[info] 
+[debug] [2025-07-01T10:23:40.387Z] skipping / due to revalidate
+[debug] [2025-07-01T10:23:40.430Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:40.430Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:40.430Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites/amici-felini [none]
+[debug] [2025-07-01T10:23:41.378Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites/amici-felini 200
+[debug] [2025-07-01T10:23:41.378Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/amici-felini/sites/amici-felini {"name":"projects/amici-felini/sites/amici-felini","defaultUrl":"https://amici-felini.web.app","type":"DEFAULT_SITE"}
+[warn] ⚠  This integration expects Node version 16, 18, or 20. You're running version 24, problems may be encountered. 
+[debug] [2025-07-01T10:23:53.163Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-central1"
+      },
+      "site": "amici-felini",
+      "rewrites": [
+        {
+          "source": "/**",
+          "function": {
+            "functionId": "ssramicifelini",
+            "region": "us-central1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/_not-found",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
+            }
+          ]
+        },
+        {
+          "source": "/favicon.ico",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "image/x-icon"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+            }
+          ]
+        },
+        {
+          "source": "/admin",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/page,_N_T_/admin"
+            }
+          ]
+        },
+        {
+          "source": "/admin/add-cat",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/add-cat/layout,_N_T_/admin/add-cat/page,_N_T_/admin/add-cat"
+            }
+          ]
+        },
+        {
+          "source": "/admin/chats",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/chats/layout,_N_T_/admin/chats/page,_N_T_/admin/chats"
+            }
+          ]
+        },
+        {
+          "source": "/browse",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/browse/layout,_N_T_/browse/page,_N_T_/browse"
+            }
+          ]
+        },
+        {
+          "source": "/chats",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/chats/layout,_N_T_/chats/page,_N_T_/chats"
+            }
+          ]
+        },
+        {
+          "source": "/profile",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/profile/layout,_N_T_/profile/page,_N_T_/profile"
+            }
+          ]
+        },
+        {
+          "source": "/login",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/login/layout,_N_T_/login/page,_N_T_/login"
+            }
+          ]
+        },
+        {
+          "source": "/register",
+          "headers": [
+            {
+              "key": "x-nextjs-stale-time",
+              "value": "4294967294"
+            },
+            {
+              "key": "x-nextjs-prerender",
+              "value": "1"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/register/layout,_N_T_/register/page,_N_T_/register"
+            }
+          ]
+        },
+        {
+          "source": "/**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoiYW1pY2ktZmVsaW5pIiwiYXBwSWQiOiIxOjM4MjEyNzAxODA4ODp3ZWI6MWExM2ViN2NmZTI3ODlkNzZmNmJkZCIsInN0b3JhZ2VCdWNrZXQiOiJhbWljaS1mZWxpbmkuZmlyZWJhc2VzdG9yYWdlLmFwcCIsImFwaUtleSI6IkFJemFTeUItYUI3T28xaGlGdzdUS1VLLXBseWxiTTUtaURuYUJDayIsImF1dGhEb21haW4iOiJhbWljaS1mZWxpbmkuZmlyZWJhc2VhcHAuY29tIiwibWVzc2FnaW5nU2VuZGVySWQiOiIzODIxMjcwMTgwODgifSwiX2F1dGhUb2tlblN5bmNVUkwiOiIvX19zZXNzaW9uIn0; SameSite=Strict; Expires=2027-05-26T21:03:53.161Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/amici-felini/hosting",
+      "webFramework": "next_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase/amici-felini/functions",
+      "codebase": "firebase-frameworks-amici-felini"
+    }
+  ]
+}
+[debug] [2025-07-01T10:23:53.170Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-01T10:23:53.171Z] > authorizing via signed-in user (longobardi90@gmail.com)
+[debug] [2025-07-01T10:23:53.172Z] [iam] checking project amici-felini for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-07-01T10:23:53.173Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:53.173Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:53.174Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions [none]
+[debug] [2025-07-01T10:23:53.174Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions x-goog-quota-user=projects/amici-felini
+[debug] [2025-07-01T10:23:53.174Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-07-01T10:23:54.011Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions 200
+[debug] [2025-07-01T10:23:54.011Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'amici-felini'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2025-07-01T10:23:54.038Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:54.040Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:54.040Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini [none]
+[debug] [2025-07-01T10:23:54.266Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini 200
+[debug] [2025-07-01T10:23:54.266Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini {"projectNumber":"382127018088","projectId":"amici-felini","lifecycleState":"ACTIVE","name":"Amici Felini","labels":{"monospace-workspace-id":"studio-42553622","firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-04-28T15:20:03.944857Z"}
+[info] i  functions: preparing codebase firebase-frameworks-amici-felini for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-07-01T10:23:54.273Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:54.273Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:54.273Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/amici-felini/adminSdkConfig [none]
+[debug] [2025-07-01T10:23:54.810Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/amici-felini/adminSdkConfig 200
+[debug] [2025-07-01T10:23:54.810Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/amici-felini/adminSdkConfig {"projectId":"amici-felini","storageBucket":"amici-felini.firebasestorage.app"}
+[debug] [2025-07-01T10:23:54.813Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:54.813Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:23:54.813Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/amici-felini/configs [none]
+[debug] [2025-07-01T10:23:55.201Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/amici-felini/configs 200
+[debug] [2025-07-01T10:23:55.202Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/amici-felini/configs {}
+[debug] [2025-07-01T10:23:55.210Z] Validating nodejs source
+[debug] [2025-07-01T10:23:56.065Z] > [functions] package.json contents: {
+  "name": "nextn",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@genkit-ai/googleai": "^1.0.4",
+    "@genkit-ai/next": "^1.0.4",
+    "@hookform/resolvers": "^4.1.3",
+    "@radix-ui/react-accordion": "^1.2.3",
+    "@radix-ui/react-alert-dialog": "^1.1.6",
+    "@radix-ui/react-avatar": "^1.1.3",
+    "@radix-ui/react-checkbox": "^1.1.4",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-dropdown-menu": "^2.1.6",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-menubar": "^1.1.6",
+    "@radix-ui/react-popover": "^1.1.6",
+    "@radix-ui/react-progress": "^1.1.2",
+    "@radix-ui/react-radio-group": "^1.2.3",
+    "@radix-ui/react-scroll-area": "^1.2.3",
+    "@radix-ui/react-select": "^2.1.6",
+    "@radix-ui/react-separator": "^1.1.2",
+    "@radix-ui/react-slider": "^1.2.3",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-switch": "^1.1.3",
+    "@radix-ui/react-tabs": "^1.1.3",
+    "@radix-ui/react-toast": "^1.2.14",
+    "@radix-ui/react-tooltip": "^1.1.8",
+    "@tanstack-query-firebase/react": "^1.0.5",
+    "@tanstack/react-query": "^5.66.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "firebase": "^11.9.1",
+    "genkit": "^1.0.4",
+    "lucide-react": "^0.475.0",
+    "next": "15.2.3",
+    "patch-package": "^8.0.0",
+    "react": "^18.3.1",
+    "react-day-picker": "^8.10.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.54.2",
+    "recharts": "^2.15.1",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.2",
+    "firebase-frameworks": "^0.11.0",
+    "firebase-functions": "^6.0.1",
+    "firebase-admin": "^11.11.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "20"
+  }
+}
+[debug] [2025-07-01T10:23:56.065Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-amici-felini to determine what to deploy 
+[debug] [2025-07-01T10:23:56.069Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-01T10:23:56.088Z] Found firebase-functions binary at '/home/domenico/Desktop/projects/arrogatti-website/.firebase/amici-felini/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8838
+
+[debug] [2025-07-01T10:23:56.751Z] Got response from /__/functions.yaml {"endpoints":{"ssramicifelini":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssramicifelini"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-07-01T10:24:00.805Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-01T10:24:00.806Z] > authorizing via signed-in user (longobardi90@gmail.com)
+[debug] [2025-07-01T10:24:00.806Z] [iam] checking project amici-felini for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-07-01T10:24:00.806Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:00.806Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:00.807Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions [none]
+[debug] [2025-07-01T10:24:00.807Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions x-goog-quota-user=projects/amici-felini
+[debug] [2025-07-01T10:24:00.807Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-07-01T10:24:01.578Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions 200
+[debug] [2025-07-01T10:24:01.578Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-07-01T10:24:01.579Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:01.579Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:01.579Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/amici-felini/instances pageSize=100&pageToken=
+[debug] [2025-07-01T10:24:02.576Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/amici-felini/instances 200
+[debug] [2025-07-01T10:24:02.576Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/amici-felini/instances {}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase/amici-felini/functions directory for uploading... 
+[info] i  functions: packaged /home/domenico/Desktop/projects/arrogatti-website/.firebase/amici-felini/functions (96.09 MB) for uploading 
+[debug] [2025-07-01T10:24:13.948Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:13.948Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:13.948Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/amici-felini/locations/-/functions [none]
+[debug] [2025-07-01T10:24:14.620Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/amici-felini/locations/-/functions 200
+[debug] [2025-07-01T10:24:14.621Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/amici-felini/locations/-/functions {}
+[debug] [2025-07-01T10:24:14.621Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:14.621Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:14.623Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-07-01T10:24:15.686Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/-/functions 200
+[debug] [2025-07-01T10:24:15.687Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/-/functions {"functions":[{"name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"build":"projects/382127018088/locations/us-central1/builds/dd51e6f5-cb0c-48d8-90d6-ac1a08f19521","runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-07-01T10:04:23.078459429Z","labels":{"firebase-functions-hash":"d561f2c2529a7b86911f555a67900d77931c4707","deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","createTime":"2025-06-25T12:20:24.605894673Z","satisfiesPzi":true}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-07-01T10:24:15.698Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:15.698Z] Checked if tokens are valid: true, expires at: 1751368977574
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-07-01T10:24:15.699Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:15.699Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:15.699Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-07-01T10:24:15.699Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/pubsub.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/382127018088
+[debug] [2025-07-01T10:24:15.699Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/pubsub.googleapis.com:generateServiceIdentity {}
+[debug] [2025-07-01T10:24:15.702Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-07-01T10:24:15.703Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/eventarc.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/382127018088
+[debug] [2025-07-01T10:24:15.703Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/eventarc.googleapis.com:generateServiceIdentity {}
+[debug] [2025-07-01T10:24:16.734Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-07-01T10:24:16.734Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-382127018088@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"110666852669791067782"}}
+[debug] [2025-07-01T10:24:16.765Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-07-01T10:24:16.765Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/382127018088/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-382127018088@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"106408385599853680063"}}
+[debug] [2025-07-01T10:24:16.771Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:16.771Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:16.771Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini [none]
+[debug] [2025-07-01T10:24:17.653Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini 200
+[debug] [2025-07-01T10:24:17.653Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/amici-felini {"projectNumber":"382127018088","projectId":"amici-felini","lifecycleState":"ACTIVE","name":"Amici Felini","labels":{"monospace-workspace-id":"studio-42553622","firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-04-28T15:20:03.944857Z"}
+[debug] [2025-07-01T10:24:17.654Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:17.654Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:17.654Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/382127018088 [none]
+[debug] [2025-07-01T10:24:17.991Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/382127018088 403
+[debug] [2025-07-01T10:24:17.992Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/382127018088 {"error":{"code":403,"message":"Compute Engine API has not been used in project 382127018088 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 382127018088 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"containerInfo":"382127018088","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088","consumer":"projects/382127018088","serviceTitle":"Compute Engine API","service":"compute.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 382127018088 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088"}]}]}}
+[debug] [2025-07-01T10:24:17.996Z] unable to look up default compute service account. Falling back to 382127018088-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 382127018088 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 382127018088 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"containerInfo":"382127018088","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088","consumer":"projects/382127018088","serviceTitle":"Compute Engine API","service":"compute.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 382127018088 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/382127018088 had HTTP Error: 403, Compute Engine API has not been used in project 382127018088 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=382127018088 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[debug] [2025-07-01T10:24:18.001Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:18.001Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:18.001Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/amici-felini/versions [none]
+[debug] [2025-07-01T10:24:18.001Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/amici-felini/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2025-07-01T10:24:19.613Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/amici-felini/versions 200
+[debug] [2025-07-01T10:24:19.613Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/amici-felini/versions {"name":"projects/382127018088/sites/amici-felini/versions/52b31894a316e474","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2025-07-01T10:24:19.615Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:19.615Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:19.615Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/amici-felini/billingInfo [none]
+[debug] [2025-07-01T10:24:20.165Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/amici-felini/billingInfo 200
+[debug] [2025-07-01T10:24:20.165Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/amici-felini/billingInfo {"name":"projects/amici-felini/billingInfo","projectId":"amici-felini","billingAccountName":"billingAccounts/0181D0-9E4C11-ECC961","billingEnabled":true}
+[debug] [2025-07-01T10:24:20.178Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:20.178Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:20.178Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-07-01T10:24:20.972Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-07-01T10:24:20.973Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-382127018088.us-central1.cloudfunctions.appspot.com/148cd7c9-e7d0-4590-8c6a-2cf41f3295d2.zip?GoogleAccessId=service-382127018088@gcf-admin-robot.iam.gserviceaccount.com&Expires=1751367260&Signature=H%2FqrEUhNhZ2V2F7Tvo1b58NmQelsXR3q%2BCDRCslUlaG2ETk%2F83JNDhLGZ7bCLrvFq3LMPuNyTSIriAMQjL%2FeampmER2OPSxwAbGFS40pn4R%2F8zt0cQqs5oAJdnloGHuJSGWRzcw4cvzGXGG%2B0Ap0wALQVE8vP4b1lU7GC1scdPdxP392znHcZZFOKTn4UQDrne6rEYFQ3HYG6HLlVc8DrLAuZ%2BBw4l0bhgr%2F%2BeTwfbCjMcd1Ncjv4BZCjV6a8sdw16LDfubUv1ViVwpR7ue3OU8Ek5pqMXcHLXagxv1NgCl994TB9Lsyhf3shNZXaw6e39AhBHWjlEvUGFjHD61%2Bbg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-382127018088.us-central1.cloudfunctions.appspot.com","object":"148cd7c9-e7d0-4590-8c6a-2cf41f3295d2.zip"}}
+[debug] [2025-07-01T10:24:20.976Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-382127018088.us-central1.cloudfunctions.appspot.com/148cd7c9-e7d0-4590-8c6a-2cf41f3295d2.zip GoogleAccessId=service-382127018088%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1751367260&Signature=H%2FqrEUhNhZ2V2F7Tvo1b58NmQelsXR3q%2BCDRCslUlaG2ETk%2F83JNDhLGZ7bCLrvFq3LMPuNyTSIriAMQjL%2FeampmER2OPSxwAbGFS40pn4R%2F8zt0cQqs5oAJdnloGHuJSGWRzcw4cvzGXGG%2B0Ap0wALQVE8vP4b1lU7GC1scdPdxP392znHcZZFOKTn4UQDrne6rEYFQ3HYG6HLlVc8DrLAuZ%2BBw4l0bhgr%2F%2BeTwfbCjMcd1Ncjv4BZCjV6a8sdw16LDfubUv1ViVwpR7ue3OU8Ek5pqMXcHLXagxv1NgCl994TB9Lsyhf3shNZXaw6e39AhBHWjlEvUGFjHD61%2Bbg%3D%3D
+[debug] [2025-07-01T10:24:20.976Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-382127018088.us-central1.cloudfunctions.appspot.com/148cd7c9-e7d0-4590-8c6a-2cf41f3295d2.zip [stream]
+[debug] [2025-07-01T10:24:25.894Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-382127018088.us-central1.cloudfunctions.appspot.com/148cd7c9-e7d0-4590-8c6a-2cf41f3295d2.zip 200
+[debug] [2025-07-01T10:24:25.895Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-382127018088.us-central1.cloudfunctions.appspot.com/148cd7c9-e7d0-4590-8c6a-2cf41f3295d2.zip [omitted]
+[info] ✔  functions: .firebase/amici-felini/functions folder uploaded successfully 
+[info] i  hosting[amici-felini]: beginning deploy... 
+[info] i  hosting[amici-felini]: found 51 files in .firebase/amici-felini/hosting 
+[debug] [2025-07-01T10:24:25.958Z] [hosting] uploading with 200 concurrency
+[debug] [2025-07-01T10:24:26.062Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:26.062Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:26.064Z] [hosting] hash cache [LmZpcmViYXNlL2FtaWNpLWZlbGluaS9ob3N0aW5n] stored for 51 files
+[debug] [2025-07-01T10:24:26.064Z] [hosting][hash queue][FINAL] {"max":90,"min":28,"avg":52.9607843137255,"active":0,"complete":51,"success":51,"errored":0,"retried":0,"total":51,"elapsed":99}
+[debug] [2025-07-01T10:24:26.064Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/382127018088/sites/amici-felini/versions/52b31894a316e474:populateFiles [none]
+[debug] [2025-07-01T10:24:26.064Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/382127018088/sites/amici-felini/versions/52b31894a316e474:populateFiles {"files":{"/googlef9ddaa814595fceb.html":"ccdd30a4e7bc3940442797a94f0e4294ccdaf0a365ba71eb5ba6d344d666eef4","/login.html":"ecbe457dd7337efe18ed36708f180da758aa99f38f83ff372bc26e1fb76b2678","/profile.html":"fbc28b991695ce8ae1a38adec2d7904bdeeb394f6b2a90af81d4503c11d823c0","/admin.html":"1918ac88f112ea9bb39947bfd342163c9a42907393b830ec0eba4bb3eb3b883d","/404.html":"a468186a2ca0f243942f087df3c98d85b96f5a047ab61ebb3f597ecd2ac79ad2","/register.html":"7a3dfb1fbddd08cdc945e39d304b2332ecab3b1d4de98e8f3922582adc56d526","/chats.html":"6bf2b08daf4f94754f386ecf6602f1b91223cdc80eb432c49f16118b4ac1de0d","/browse.html":"66b94fd65dd9086fda4862d3c5550b81643c3f50862b71463df258b2adab7c16","/admin/add-cat.html":"eaeee88b6a6f35e9d314c3290e4da31069f22f0ae9029f7e343c401b22578278","/admin/chats.html":"35e484df120aab184d4d6fdfa46b945c961ad59b792b9721d772122a9a6fb8d8","/_next/static/media/ba015fad6dcf6784-s.woff2":"4a07b45915c56188328e8077fa9c25b21fdc0ea9aa3ae06473b7d0bb71f9ad28","/_next/static/media/9610d9e46709d722-s.woff2":"272abfc0f06abd58957a4f17020294bc99ebb472c4e2165c6ce6e6eb945cfeb7","/favicon.ico":"7ec51c445e356b92709903a2b2880d32a15c4f6496aa999d61551a42c4b3d69f","/_next/static/chunks/webpack-df70cda71feca323.js":"b88f53481012f8a0bc7a234615b8f38cb0ea76589a4adda5ab0a8a1d293d4863","/_next/static/chunks/main-app-377203c0bfff4032.js":"021f9a80929da23915dfb97706a3205e70053fb44b6f9caba3cc0d9a2e24b1b3","/_next/static/media/8d697b304b401681-s.woff2":"670826dbd2d2b0cc38ab0fd42bbe8d533e23a72b4e6241048e4969c202110a41","/_next/static/media/747892c23ea88013-s.woff2":"546266d49bcf52eb0c1bb559761a5d57ab87e0c26ca2bae85cd20b0a238293ea","/_next/static/css/335ea460c4233b88.css":"38d5831b2d920d2957c77b3c741475f52403434a8d66f0be07861b6aac06bbb7","/_next/static/chunks/874-c28bc0b464981966.js":"d31f76dd48476349228be439288796127717d76abe366b62c6d4a8604811139c","/_next/static/chunks/223-7a4b157922a4cd20.js":"75caee28effc74da1bb6bb17f6bcea6b435294332c187a7c034a94e07b75a09f","/_next/static/chunks/63-ca2745636675a75a.js":"54f1ef160372bcbdf699d4e3d2969097a992746b03768b2e674d04ae3f7ee385","/_next/static/chunks/pages/_app-b3eb694be5fbf7e0.js":"cbdec45a8a09696d476a3aea2d058c887c25cbf8edf409fb7711e9d958e3347d","/_next/static/chunks/pages/_error-98af0c69afd79e09.js":"dcdbb77e7744a6c5ff3a57c756b6c005a6ed349282954a4179087f4cd72ddc67","/_next/static/chunks/app/page-a43efa6cc38cdc28.js":"d721fceb8cb885e2a81785a16ed1162a2d55c9ffae82d6088f38c2c334e0cfa6","/_next/static/chunks/app/register/page-9abd0c1829555793.js":"744039a4023c402717bfc8eb9805fa6abe8d6cfd84f56c8793faf0d56846dc83","/_next/static/chunks/49-6fee3eb485d833ee.js":"cd2d633801ce45d735f3711d321640acfb904eb5570cd9f8c8192183aeaa4c1a","/_next/static/chunks/app/layout-9602c92c5bacf22c.js":"0295ce3703dffc6f0a5f0ab5c55c1ab920c47b766225904ac2d83d7242b42ffa","/_next/static/chunks/app/login/page-ea70f0cb877c2c9f.js":"ba582ae9e2ef445dc5a012d55fa5c19c32caf957d4dc3b1ff5e1690a84db387f","/_next/static/chunks/app/chat/[chatId]/page-075b708b910526ab.js":"29ff0dc5e61d826f46c5ad232ed8a07e7713198994cdde3585e121e5c7677064","/_next/static/chunks/app/browse/page-7589d7a709006c4e.js":"7c11011670d8e5ae1880225f11374cd12c801b468f213f68776b32effd18c24b","/_next/static/chunks/app/profile/page-7642a9546f575b4a.js":"4987625cc9369072d3fdeddf83cb31b58969fda8830c0fd0a20e7e5e7031e233","/_next/static/chunks/app/chats/page-af5d2317f1d9fd17.js":"9160641d2bde0b7a7194b3d619fef09e6d5e5284e40f5589d87c2a89d7bef501","/_next/static/chunks/app/cats/[id]/page-f3ee747651fd3b01.js":"220d53aa5a69a91b5033be7dbb9d87e17988703f33b4c71637fec5ac58fa9dfb","/_next/static/chunks/app/admin/chats/page-e4b114a2fce7c3d0.js":"72c22fc90595747eefca36ee3a2dd6945c94796353c78b1b945d67c77ab71200","/_next/static/chunks/app/admin/page-38abb7896c2dd948.js":"482e1faf3507b38352c37411618924c04daecce82fb0ccb2ad5fc71b2877b752","/_next/static/chunks/app/admin/edit-cat/[id]/page-90c49e3fb9191bf0.js":"16cd4b268061a8530b9725dc7376e6b205108899b5839114de0c49f29a936388","/_next/static/7WJ_JZHv-jPuVzQDSrEVA/_ssgManifest.js":"d8d8790f4e673a23bec506f00699bed8a258ac0e4965bb1ca8598172cfc0ec97","/_next/static/chunks/app/_not-found/page-7b137d85f9de4771.js":"c9272a86fa458ddfeae54c58aa07a03719cbc5dcea2d61dc39e6667d4169a80d","/_next/static/chunks/app/admin/add-cat/page-06ffab515633df1e.js":"258d667395ea970aa9e67f632dd82ac4a2201a20eb5b2ee5cdd1db29be591032","/_next/static/media/569ce4b8f30dc480-s.p.woff2":"7f372fe014b61ea6f8a03592282aad63b101598fbb44397ee0e5b0d150974164","/_next/static/media/93f479601ee12b01-s.p.woff2":"ef0f61ba9cbbcad3b633cdd1ee5a56b683e1fdcc2d136aa5f920648c6d1222d8","/_next/static/chunks/ceb9e9aa-90ba92655eafb5a6.js":"d2088ce29feac54d45721a643abe49d3db896898c3474d6442d52640cb25dd8a","/_next/static/chunks/polyfills-42372ed130431b0a.js":"45b36f93bb08c52e360d14b0e8449c88770aa8cf5d59bff1c76cbe6e198fe7c5","/_next/static/chunks/main-876ad2b076353da7.js":"9b62a2831bcf4ee7a088296f188bbc30910fce0d7ba5b76014ba3d46b3d3e085","/_next/static/chunks/999-a76de1438de7ffe1.js":"6547242d67bc80890f9bd1d3b9894f3df6c29b28a3cda95b7438550f5e0795df","/_next/static/7WJ_JZHv-jPuVzQDSrEVA/_buildManifest.js":"d2da62ebb1ef92f3f617c6498171b7a2ccc4a5672f600e91062ad67b3843d601","/_next/static/chunks/framework-6d868e9bc95e10d8.js":"55c5edf92a68f9088693b32e79eb089b1b3117cc03225d1fb29bb0a66f505252","/_next/static/chunks/994-f14976265a2e09eb.js":"0e8a50f839e7f53e8adf5025d52c319902d1d91f284ee961f535a34eea9f4312","/_next/static/chunks/684-12ac0d270c051f13.js":"4016d6fb37a9ecafa530fe17a8cd3d66b7dabed5cdcb1bcf5a89294b4c4b3ee8","/_next/static/chunks/4bd1b696-989d33d1584df2ab.js":"43eb92ccb5c679f3fa0b6085f20603049156dcf4d1f40934f7e48602e1ed0090","/_next/static/chunks/bc9e92e6-953128e21fde5821.js":"3e844d0b19754139c2da915912e58dc96a41508ff7328c74965c62ecb2ec3714"}}
+[debug] [2025-07-01T10:24:27.076Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/382127018088/sites/amici-felini/versions/52b31894a316e474:populateFiles 200
+[debug] [2025-07-01T10:24:27.076Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/382127018088/sites/amici-felini/versions/52b31894a316e474:populateFiles {"uploadRequiredHashes":["eaeee88b6a6f35e9d314c3290e4da31069f22f0ae9029f7e343c401b22578278","fbc28b991695ce8ae1a38adec2d7904bdeeb394f6b2a90af81d4503c11d823c0","35e484df120aab184d4d6fdfa46b945c961ad59b792b9721d772122a9a6fb8d8","1918ac88f112ea9bb39947bfd342163c9a42907393b830ec0eba4bb3eb3b883d","a468186a2ca0f243942f087df3c98d85b96f5a047ab61ebb3f597ecd2ac79ad2","6bf2b08daf4f94754f386ecf6602f1b91223cdc80eb432c49f16118b4ac1de0d","66b94fd65dd9086fda4862d3c5550b81643c3f50862b71463df258b2adab7c16","7a3dfb1fbddd08cdc945e39d304b2332ecab3b1d4de98e8f3922582adc56d526","ccdd30a4e7bc3940442797a94f0e4294ccdaf0a365ba71eb5ba6d344d666eef4","ecbe457dd7337efe18ed36708f180da758aa99f38f83ff372bc26e1fb76b2678"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files"}
+[debug] [2025-07-01T10:24:27.077Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.077Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.077Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.077Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.078Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.078Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.078Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.078Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.078Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.078Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.078Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.078Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.079Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.079Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.079Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.079Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.079Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.079Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.079Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.079Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:27.079Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/eaeee88b6a6f35e9d314c3290e4da31069f22f0ae9029f7e343c401b22578278 [none]
+[debug] [2025-07-01T10:24:27.080Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/eaeee88b6a6f35e9d314c3290e4da31069f22f0ae9029f7e343c401b22578278 [stream]
+[debug] [2025-07-01T10:24:27.081Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/fbc28b991695ce8ae1a38adec2d7904bdeeb394f6b2a90af81d4503c11d823c0 [none]
+[debug] [2025-07-01T10:24:27.081Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/fbc28b991695ce8ae1a38adec2d7904bdeeb394f6b2a90af81d4503c11d823c0 [stream]
+[debug] [2025-07-01T10:24:27.083Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/35e484df120aab184d4d6fdfa46b945c961ad59b792b9721d772122a9a6fb8d8 [none]
+[debug] [2025-07-01T10:24:27.083Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/35e484df120aab184d4d6fdfa46b945c961ad59b792b9721d772122a9a6fb8d8 [stream]
+[debug] [2025-07-01T10:24:27.084Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/1918ac88f112ea9bb39947bfd342163c9a42907393b830ec0eba4bb3eb3b883d [none]
+[debug] [2025-07-01T10:24:27.084Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/1918ac88f112ea9bb39947bfd342163c9a42907393b830ec0eba4bb3eb3b883d [stream]
+[debug] [2025-07-01T10:24:27.086Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/a468186a2ca0f243942f087df3c98d85b96f5a047ab61ebb3f597ecd2ac79ad2 [none]
+[debug] [2025-07-01T10:24:27.086Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/a468186a2ca0f243942f087df3c98d85b96f5a047ab61ebb3f597ecd2ac79ad2 [stream]
+[debug] [2025-07-01T10:24:27.087Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/6bf2b08daf4f94754f386ecf6602f1b91223cdc80eb432c49f16118b4ac1de0d [none]
+[debug] [2025-07-01T10:24:27.087Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/6bf2b08daf4f94754f386ecf6602f1b91223cdc80eb432c49f16118b4ac1de0d [stream]
+[debug] [2025-07-01T10:24:27.088Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/66b94fd65dd9086fda4862d3c5550b81643c3f50862b71463df258b2adab7c16 [none]
+[debug] [2025-07-01T10:24:27.088Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/66b94fd65dd9086fda4862d3c5550b81643c3f50862b71463df258b2adab7c16 [stream]
+[debug] [2025-07-01T10:24:27.090Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/7a3dfb1fbddd08cdc945e39d304b2332ecab3b1d4de98e8f3922582adc56d526 [none]
+[debug] [2025-07-01T10:24:27.090Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/7a3dfb1fbddd08cdc945e39d304b2332ecab3b1d4de98e8f3922582adc56d526 [stream]
+[debug] [2025-07-01T10:24:27.091Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/ccdd30a4e7bc3940442797a94f0e4294ccdaf0a365ba71eb5ba6d344d666eef4 [none]
+[debug] [2025-07-01T10:24:27.091Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/ccdd30a4e7bc3940442797a94f0e4294ccdaf0a365ba71eb5ba6d344d666eef4 [stream]
+[debug] [2025-07-01T10:24:27.093Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/ecbe457dd7337efe18ed36708f180da758aa99f38f83ff372bc26e1fb76b2678 [none]
+[debug] [2025-07-01T10:24:27.093Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/ecbe457dd7337efe18ed36708f180da758aa99f38f83ff372bc26e1fb76b2678 [stream]
+[debug] [2025-07-01T10:24:27.095Z] [hosting][populate queue][FINAL] {"max":1018,"min":1018,"avg":1018,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1034}
+[debug] [2025-07-01T10:24:27.095Z] [hosting] uploads queued: 10
+[debug] [2025-07-01T10:24:28.206Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/66b94fd65dd9086fda4862d3c5550b81643c3f50862b71463df258b2adab7c16 200
+[debug] [2025-07-01T10:24:28.207Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/66b94fd65dd9086fda4862d3c5550b81643c3f50862b71463df258b2adab7c16 [stream]
+[debug] [2025-07-01T10:24:28.550Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/ecbe457dd7337efe18ed36708f180da758aa99f38f83ff372bc26e1fb76b2678 200
+[debug] [2025-07-01T10:24:28.551Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/ecbe457dd7337efe18ed36708f180da758aa99f38f83ff372bc26e1fb76b2678 [stream]
+[debug] [2025-07-01T10:24:28.559Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/fbc28b991695ce8ae1a38adec2d7904bdeeb394f6b2a90af81d4503c11d823c0 200
+[debug] [2025-07-01T10:24:28.559Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/fbc28b991695ce8ae1a38adec2d7904bdeeb394f6b2a90af81d4503c11d823c0 [stream]
+[debug] [2025-07-01T10:24:28.651Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/ccdd30a4e7bc3940442797a94f0e4294ccdaf0a365ba71eb5ba6d344d666eef4 200
+[debug] [2025-07-01T10:24:28.651Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/ccdd30a4e7bc3940442797a94f0e4294ccdaf0a365ba71eb5ba6d344d666eef4 [stream]
+[debug] [2025-07-01T10:24:28.717Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/1918ac88f112ea9bb39947bfd342163c9a42907393b830ec0eba4bb3eb3b883d 200
+[debug] [2025-07-01T10:24:28.717Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/1918ac88f112ea9bb39947bfd342163c9a42907393b830ec0eba4bb3eb3b883d [stream]
+[debug] [2025-07-01T10:24:28.718Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/a468186a2ca0f243942f087df3c98d85b96f5a047ab61ebb3f597ecd2ac79ad2 200
+[debug] [2025-07-01T10:24:28.718Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/a468186a2ca0f243942f087df3c98d85b96f5a047ab61ebb3f597ecd2ac79ad2 [stream]
+[debug] [2025-07-01T10:24:28.824Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/7a3dfb1fbddd08cdc945e39d304b2332ecab3b1d4de98e8f3922582adc56d526 200
+[debug] [2025-07-01T10:24:28.824Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/7a3dfb1fbddd08cdc945e39d304b2332ecab3b1d4de98e8f3922582adc56d526 [stream]
+[debug] [2025-07-01T10:24:28.826Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/eaeee88b6a6f35e9d314c3290e4da31069f22f0ae9029f7e343c401b22578278 200
+[debug] [2025-07-01T10:24:28.826Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/eaeee88b6a6f35e9d314c3290e4da31069f22f0ae9029f7e343c401b22578278 [stream]
+[debug] [2025-07-01T10:24:28.972Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/35e484df120aab184d4d6fdfa46b945c961ad59b792b9721d772122a9a6fb8d8 200
+[debug] [2025-07-01T10:24:28.973Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/35e484df120aab184d4d6fdfa46b945c961ad59b792b9721d772122a9a6fb8d8 [stream]
+[debug] [2025-07-01T10:24:29.266Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/6bf2b08daf4f94754f386ecf6602f1b91223cdc80eb432c49f16118b4ac1de0d 200
+[debug] [2025-07-01T10:24:29.266Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/amici-felini/versions/52b31894a316e474/files/6bf2b08daf4f94754f386ecf6602f1b91223cdc80eb432c49f16118b4ac1de0d [stream]
+[debug] [2025-07-01T10:24:29.266Z] [hosting][upload queue][FINAL] {"max":2188,"min":1129,"avg":1651.3,"active":0,"complete":10,"success":10,"errored":0,"retried":0,"total":10,"elapsed":2190}
+[info] ✔  hosting[amici-felini]: file upload complete 
+[debug] [2025-07-01T10:24:29.267Z] [hosting] deploy completed after 3364ms
+[info] i  functions: updating Node.js 20 (2nd Gen) function firebase-frameworks-amici-felini:ssramicifelini(us-central1)... 
+[debug] [2025-07-01T10:24:29.277Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:29.277Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:29.278Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/functions/ssramicifelini updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels
+[debug] [2025-07-01T10:24:29.278Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/functions/ssramicifelini {"name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-uploads-382127018088.us-central1.cloudfunctions.appspot.com","object":"148cd7c9-e7d0-4590-8c6a-2cf41f3295d2.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"}}
+[debug] [2025-07-01T10:24:30.966Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/functions/ssramicifelini 200
+[debug] [2025-07-01T10:24:30.966Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/functions/ssramicifelini {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2025-07-01T10:24:30.967Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:30.967Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:30.968Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:24:31.692Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:24:31.692Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Creating build","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:24:32.193Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:24:32.193Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:32.194Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:32.194Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:24:32.911Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:24:32.912Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:24:33.913Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:24:33.913Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:33.913Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:33.913Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:24:34.641Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:24:34.641Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:24:36.643Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:24:36.643Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:36.643Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:36.644Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:24:37.367Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:24:37.367Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:24:41.369Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:24:41.369Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:41.370Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:41.370Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:24:42.112Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:24:42.112Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:24:50.115Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:24:50.115Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:50.115Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:24:50.116Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:24:50.936Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:24:50.936Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:25:00.942Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:25:00.942Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:00.942Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:00.943Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:25:01.695Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:25:01.695Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:25:11.700Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:25:11.701Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:11.701Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:11.701Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:25:12.482Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:25:12.482Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:25:22.488Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:25:22.488Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:22.489Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:22.489Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:25:23.249Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:25:23.249Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:25:33.255Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:25:33.255Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:33.255Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:33.255Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:25:34.018Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:25:34.018Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:25:44.023Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:25:44.023Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:44.023Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:44.024Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]
+[debug] [2025-07-01T10:25:44.812Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 200
+[debug] [2025-07-01T10:25:44.812Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 {"name":"projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-07-01T10:24:30.592241569Z","target":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/amici-felini/locations/us-central1/functions/ssramicifelini","buildConfig":{"runtime":"nodejs20","entryPoint":"ssramicifelini","source":{"storageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751365470533377"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/amici-felini/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-382127018088-us-central1","object":"ssramicifelini/function-source.zip","generation":"1751364031916474"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/amici-felini/serviceAccounts/382127018088-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/amici-felini/locations/us-central1/services/ssramicifelini","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"amici-felini.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"amici-felini\",\"appId\":\"1:382127018088:web:1a13eb7cfe2789d76f6bdd\",\"storageBucket\":\"amici-felini.firebasestorage.app\",\"apiKey\":\"AIzaSyB-aB7Oo1hiFw7TKUK-plylbM5-iDnaBCk\",\"authDomain\":\"amici-felini.firebaseapp.com\",\"messagingSenderId\":\"382127018088\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"amici-felini\",\"storageBucket\":\"amici-felini.firebasestorage.app\"}","GCLOUD_PROJECT":"amici-felini","EVENTARC_CLOUD_EVENT_SOURCE":"projects/amici-felini/locations/us-central1/services/ssramicifelini","FUNCTION_TARGET":"ssramicifelini","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://ssramicifelini-djrxy5srxq-uc.a.run.app","serviceAccountEmail":"382127018088-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssramicifelini-00025-faq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-amici-felini","firebase-functions-hash":"325d5ef6dcdb39c0cadb713bd2502d16a37fba7d"},"environment":"GEN_2","url":"https://us-central1-amici-felini.cloudfunctions.net/ssramicifelini","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/06c1bcf4-ec25-4a61-914d-a54e11e6c136?project=382127018088"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/382127018088/locations/us-central1/builds/06c1bcf4-ec25-4a61-914d-a54e11e6c136"},"done":false}
+[debug] [2025-07-01T10:25:54.817Z] [update-firebase-frameworks-amici-felini-us-central1-ssramicifelini] Retrying task index 0
+[debug] [2025-07-01T10:25:54.817Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:54.818Z] Checked if tokens are valid: true, expires at: 1751368977574
+[debug] [2025-07-01T10:25:54.818Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/amici-felini/locations/us-central1/operations/operation-1751365469717-638db8cb1c2e7-b53fa1e6-2e48a598 [none]

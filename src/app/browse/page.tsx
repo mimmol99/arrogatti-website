@@ -1,77 +1,56 @@
-import Image from 'next/image';
+// src/app/browse/page.tsx (versione finale e corretta)
+'use server'; // Questa pagina ora è un Server Component, più veloce ed efficiente
+
+import type { Cat } from '@/types/cat';
+import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { collection, getDocs, query, where, Timestamp } from 'firebase/firestore'; // Importa Timestamp
+import { CatCard } from '@/components/cats/cat-card'; // Importiamo il nostro componente riutilizzabile
 
-// Funzione per calcolare l'età a partire dalla data di nascita
-function calcolaEta(nascita: Timestamp): string {
-  const dataNascita = nascita.toDate(); // Converte il Timestamp di Firebase in una data standard
-  const oggi = new Date();
-  let etaAnni = oggi.getFullYear() - dataNascita.getFullYear();
-  let etaMesi = oggi.getMonth() - dataNascita.getMonth();
-  
-  if (etaMesi < 0 || (etaMesi === 0 && oggi.getDate() < dataNascita.getDate())) {
-    etaAnni--;
-    etaMesi += 12;
+// Funzione per caricare tutti i gatti disponibili dal database
+async function getGattiDisponibili(): Promise<Cat[]> {
+  try {
+    const gattiCollection = collection(db, 'gatti_da_adottare');
+    // La query prende i gatti non adottati e li ordina per data di creazione
+    const q = query(
+      gattiCollection, 
+      where('adottato', '==', false), 
+      orderBy('createdAt', 'desc')
+    );
+    const gattiSnapshot = await getDocs(q);
+    
+    // Mappiamo i dati nel nostro tipo 'Cat'
+    return gattiSnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    })) as Cat[];
+  } catch (error) {
+    console.error("Errore nel caricare i gatti:", error);
+    return []; // Restituisce una lista vuota in caso di errore
   }
-
-  if (etaAnni > 0) {
-    return `${etaAnni} ${etaAnni === 1 ? 'anno' : 'anni'}`;
-  } else {
-    return `${etaMesi} ${etaMesi === 1 ? 'mese' : 'mesi'}`;
-  }
-}
-
-// Aggiorniamo la nostra interfaccia per usare 'nascita'
-interface Gatto {
-  id: string;
-  nome: string;
-  nascita: Timestamp;
-  descrizione: string;
-  sesso: string;
-  fotoURL: string;
-}
-
-async function getGatti() {
-  const gattiCollection = collection(db, 'gatti_da_adottare');
-  const q = query(gattiCollection, where('adottato', '==', false));
-  const gattiSnapshot = await getDocs(q);
-  const gattiList = gattiSnapshot.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data(),
-  })) as Gatto[];
-  return gattiList;
 }
 
 export default async function BrowsePage() {
-  const gatti = await getGatti();
-
+  // Chiamiamo la funzione per ottenere i dati
+  const cats = await getGattiDisponibili();
+  
   return (
-    <div className="container mx-auto p-8">
+    <div className="container mx-auto p-4 md:p-8">
       <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">
-        Trova il tuo nuovo amico
+        I nostri Arrogatti in cerca di casa
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {gatti.map((gatto) => (
-          <div key={gatto.id} className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
-            <div className="relative w-full h-60">
-              <Image
-                src={gatto.fotoURL}
-                alt={`Foto di ${gatto.nome}`}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-gray-900">{gatto.nome}</h2>
-              {/* Qui usiamo la nostra nuova funzione per mostrare l'età calcolata */}
-              <p className="text-md text-gray-600 mt-1">{calcolaEta(gatto.nascita)}, {gatto.sesso}</p>
-              <p className="text-gray-700 mt-4">{gatto.descrizione}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      
+      {cats.length === 0 ? (
+        // Messaggio mostrato se non ci sono gatti disponibili
+        <p className="text-center text-muted-foreground py-10">Al momento non ci sono gatti disponibili per l'adozione. Riprova più tardi!</p>
+      ) : (
+        // Griglia che mostra le schede dei gatti
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {/* Usiamo il componente riutilizzabile CatCard per ogni gatto */}
+          {cats.map((cat) => (
+            <CatCard key={cat.id} cat={cat} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
-
-export const revalidate = 60;

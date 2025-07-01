@@ -1,118 +1,105 @@
-// src/app/register/page.tsx
+// src/app/register/page.tsx (versione potenziata)
 'use client';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { auth, db } from '@/lib/firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore'; // Importa setDoc
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 
-// Import di Firebase (ora più puliti)
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
-import { auth, db } from '@/lib/firebase';
-
-// Import dei componenti UI
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-
 export default function RegisterPage() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [accountType, setAccountType] = useState('adopter');
-    const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+  // ===== NUOVI STATI PER I DATI AGGIUNTIVI =====
+  const [nome, setNome] = useState('');
+  const [cognome, setCognome] = useState('');
+  const [citta, setCitta] = useState('');
+  
+  const [error, setError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const router = useRouter();
-    // Non abbiamo più bisogno di inizializzare auth e db qui
+  const handleRegister = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
 
-    const handleRegister = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setError(null);
+    try {
+      // 1. Crea l'utente in Firebase Authentication
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
 
-        if (password !== confirmPassword) {
-            setError("Le password non coincidono.");
-            return;
-        }
+      // 2. SALVA I DATI AGGIUNTIVI SU FIRESTORE
+      // Creiamo un documento nella collezione 'users' con lo stesso ID dell'utente (user.uid)
+      await setDoc(doc(db, "users", user.uid), {
+        nome: nome,
+        cognome: cognome,
+        citta: citta,
+        email: user.email,
+        role: 'adopter', // Assegniamo un ruolo di default
+      });
 
-        try {
-            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            const user = userCredential.user;
+      // 3. Reindirizza l'utente alla pagina di login o al profilo
+      router.push('/login');
 
-            await setDoc(doc(db, "users", user.uid), {
-                uid: user.uid,
-                name: name,
-                email: email,
-                role: accountType,
-                createdAt: new Date(),
-            });
+    } catch (err: any) {
+      console.error("Errore di registrazione:", err);
+      setError("Impossibile completare la registrazione. Riprova.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
-            router.push('/');
-
-        } catch (err: any) {
-            if (err.code === 'auth/email-already-in-use') {
-                setError("Questa email è già stata registrata.");
-            } else if (err.code === 'auth/weak-password') {
-                setError("La password deve essere di almeno 6 caratteri.");
-            } else {
-                setError("Si è verificato un errore durante la registrazione. Riprova.");
-            }
-        }
-    };
-
-    return (
-        <div className="flex justify-center items-start pt-16">
-             <Card className="w-full max-w-md shadow-lg border-primary/20">
-                <CardHeader className="text-center space-y-2">
-                    <CardTitle className="text-3xl font-bold text-primary">Crea un Account Arrogatti</CardTitle>
-                    <CardDescription>Registrati per adottare o per gestire le adozioni.</CardDescription>
-                </CardHeader>
-                <form onSubmit={handleRegister}> 
-                    <CardContent className="space-y-5 pt-6">
-                        <div className="space-y-3">
-                            <Label htmlFor="account-type" className="text-base font-medium">Tipo di Account</Label>
-                            <RadioGroup defaultValue={accountType} onValueChange={setAccountType} id="account-type" className="flex space-x-6 pt-1">
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="adopter" id="r-adopter" />
-                                    <Label htmlFor="r-adopter" className="text-base">Voglio Adottare</Label>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="caretaker" id="r-caretaker" />
-                                    <Label htmlFor="r-caretaker" className="text-base">Sono un Referente</Label>
-                                </div>
-                            </RadioGroup>
-                        </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="name">Nome / Nome Associazione</Label>
-                            <Input id="name" placeholder="Mario Rossi / Arrogatti ODV" required value={name} onChange={(e) => setName(e.target.value)} />
-                        </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="email">Email</Label>
-                            <Input id="email" type="email" placeholder="mario.rossi@email.com" required value={email} onChange={(e) => setEmail(e.target.value)} />
-                        </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="password">Password</Label>
-                            <Input id="password" type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
-                        </div>
-                         <div className="space-y-2">
-                            <Label htmlFor="confirm-password">Conferma Password</Label>
-                            <Input id="confirm-password" type="password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-                        </div>
-                        {error && <p className="text-sm text-center text-red-500">{error}</p>}
-                    </CardContent>
-                    <CardFooter className="flex flex-col space-y-4 pt-6">
-                        <Button type="submit" className="w-full" size="lg">Registrati</Button>
-                        <p className="text-sm text-center text-muted-foreground pt-2">
-                            Hai già un account?{' '}
-                            <Link href="/login" className="font-medium text-primary underline hover:text-primary/80">
-                                Accedi
-                            </Link>
-                        </p>
-                    </CardFooter>
-                </form>
-            </Card>
-        </div>
-    );
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <Card className="w-full max-w-md">
+        <CardHeader className="text-center">
+          <CardTitle className="text-2xl">Crea il tuo account</CardTitle>
+          <CardDescription>Entra nella famiglia di Arrogatti</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <form onSubmit={handleRegister} className="space-y-4">
+            {/* ===== NUOVI CAMPI NEL FORM ===== */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor="nome">Nome</Label>
+                <Input id="nome" value={nome} onChange={(e) => setNome(e.target.value)} required />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="cognome">Cognome</Label>
+                <Input id="cognome" value={cognome} onChange={(e) => setCognome(e.target.value)} required />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="citta">Città</Label>
+              <Input id="citta" value={citta} onChange={(e) => setCitta(e.target.value)} required />
+            </div>
+            <hr />
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            </div>
+            {error && <p className="text-red-500 text-sm">{error}</p>}
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Registrazione..." : "Registrati"}
+            </Button>
+          </form>
+          <p className="mt-4 text-center text-sm">
+            Hai già un account?{' '}
+            <Link href="/login" className="font-semibold text-primary hover:underline">Accedi</Link>
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  );
 }

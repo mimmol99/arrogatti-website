@@ -74,10 +74,13 @@ export default function AdminDashboardPage() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">Gestione Gatti</h1>
+ <div className="flex justify-between items-center mb-6">
+    <h1 className="text-3xl font-bold">Gestione Gatti</h1>
+    <div className="space-x-2"> {/* Aggiunto un contenitore per allineare i pulsanti */}
         <Link href="/admin/add-cat"><Button>+ Aggiungi Gatto</Button></Link>
-      </div>
+        <Link href="/admin/chats"><Button variant="outline">Visualizza le Chat</Button></Link>
+    </div>
+  </div>
       
       {cats.length === 0 ? (
         <p className="text-center text-muted-foreground py-10">Nessun gatto trovato. Inizia aggiungendone uno!</p>

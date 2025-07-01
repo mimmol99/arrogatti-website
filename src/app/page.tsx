@@ -1,14 +1,14 @@
-// src/app/page.tsx
+// src/app/page.tsx (versione aggiornata)
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { CatCard } from '@/components/cats/cat-card';
 import type { Cat } from '@/types/cat';
-
-// Funzioni e import per caricare i dati da Firebase (la parte dinamica)
 import { db } from '@/lib/firebase';
 import { collection, getDocs, query, where, limit } from 'firebase/firestore';
+import { IntroSection } from '@/components/home/IntroSection'; // <-- 1. IMPORTIAMO IL NUOVO COMPONENTE
+
 
 async function getFeaturedGatti() {
   const gattiCollection = collection(db, 'gatti_da_adottare');
@@ -48,17 +48,8 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* Introduction Section */}
-      <section id="intro" className="w-full max-w-4xl space-y-4 px-4">
-        <h2 className="text-3xl font-semibold text-primary">Trova il tuo compagno perfetto</h2>
-        <p className="text-muted-foreground text-lg">
-          Sfoglia i profili dei nostri Arrogatti disponibili per l'adozione in tutta Italia. Ogni gatto ha una storia unica e aspetta solo te per iniziare una nuova vita.
-        </p>
-        <div className="flex justify-center gap-4 pt-4">
-          <Link href="/browse"><Button size="lg" variant="outline">Sfoglia Gatti</Button></Link>
-          <Link href="/register"><Button size="lg" variant="secondary">Registrati per Adottare</Button></Link>
-        </div>
-      </section>
+      <IntroSection />
+
 
       {/* Featured Cats Section (ora dinamica) */}
       <section id="featured-cats" className="w-full max-w-6xl py-12 bg-secondary/30 rounded-lg shadow-inner px-6">
